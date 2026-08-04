@@ -5,7 +5,7 @@ import { initAgeGate } from "./age.js";
 const productId = document.body.dataset.productId || "curve";
 const product = getProduct(productId);
 
-document.title = `${product.name} · FORMA`;
+document.title = `${product.name} · erosia`;
 
 const crumbCurrent = document.querySelector("[data-crumb-current]");
 const title = document.querySelector("[data-pdp-title]");

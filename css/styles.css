@@ -91,10 +91,18 @@ button {
   transform: translateY(-110%);
 }
 
-.nav__brand {
+.brand {
   font-family: var(--font-display);
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
+  text-transform: lowercase;
+}
+
+.brand__e {
+  color: var(--pink);
+}
+
+.nav__brand {
   font-size: 0.95rem;
 }
 
@@ -194,10 +202,12 @@ button {
 
 .hero__brand {
   margin: 0 0 1rem;
-  font-family: var(--font-display);
-  font-weight: 800;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.22em;
   font-size: clamp(1.4rem, 3.5vw, 2rem);
+  color: var(--ink);
+}
+
+.hero__brand .brand__e {
   color: var(--pink);
 }
 
@@ -609,8 +619,8 @@ button {
 }
 
 .footer__brand strong {
-  font-family: var(--font-display);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.16em;
+  font-size: 1.05rem;
 }
 
 .footer__brand p {

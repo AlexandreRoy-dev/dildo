@@ -1,4 +1,4 @@
-const KEY = "forma-age-ok";
+const KEY = "erosia-age-ok";
 
 export function initAgeGate() {
   if (sessionStorage.getItem(KEY) === "1") return;
@@ -8,7 +8,7 @@ export function initAgeGate() {
   root.setAttribute("data-age", "");
   root.innerHTML = `
     <div class="age__panel" role="dialog" aria-modal="true" aria-labelledby="age-title">
-      <p class="hero__brand">FORMA</p>
+      <p class="hero__brand brand"><span class="brand__e">e</span>rosia</p>
       <h2 id="age-title">18 ans et plus</h2>
       <p>Ce site présente des produits de bien-être sexuel pour adultes. En entrant, tu confirmes avoir 18 ans ou plus.</p>
       <div class="age__actions">

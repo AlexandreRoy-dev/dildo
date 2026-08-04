@@ -79,7 +79,7 @@ form?.addEventListener("submit", (e) => {
   const ship = shippingCost(subtotal, selectedShipping());
 
   localStorage.setItem(
-    "forma-last-order",
+    "erosia-last-order",
     JSON.stringify({
       at: new Date().toISOString(),
       name: data.name,

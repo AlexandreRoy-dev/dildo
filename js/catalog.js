@@ -1,8 +1,8 @@
 export const CATALOG = {
   curve: {
     id: "curve",
-    page: "forma-curve.html",
-    name: "Forma Curve",
+    page: "erosia-curve.html",
+    name: "erosia Curve",
     price: 129,
     tag: "Vedette",
     blurb: "Contour point G ergonomique · 8 modes",
@@ -26,8 +26,8 @@ export const CATALOG = {
   },
   pulse: {
     id: "pulse",
-    page: "forma-pulse.html",
-    name: "Forma Pulse",
+    page: "erosia-pulse.html",
+    name: "erosia Pulse",
     price: 149,
     tag: "Nouveau",
     blurb: "Aspiration par ondes d’air · rechargeable",
@@ -51,8 +51,8 @@ export const CATALOG = {
   },
   soft: {
     id: "soft",
-    page: "forma-soft.html",
-    name: "Forma Soft",
+    page: "erosia-soft.html",
+    name: "erosia Soft",
     price: 89,
     tag: null,
     blurb: "Silicone ultra doux · intensité douce",
@@ -76,8 +76,8 @@ export const CATALOG = {
   },
   duo: {
     id: "duo",
-    page: "forma-duo.html",
-    name: "Forma Duo",
+    page: "erosia-duo.html",
+    name: "erosia Duo",
     price: 179,
     tag: null,
     blurb: "Contrôle partagé · prêt pour l’appli",

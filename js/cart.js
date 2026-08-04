@@ -1,6 +1,6 @@
 import { CATALOG, money } from "./catalog.js";
 
-const STORAGE_KEY = "forma-cart";
+const STORAGE_KEY = "erosia-cart";
 
 function load() {
   try {
