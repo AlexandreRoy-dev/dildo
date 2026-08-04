@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caisse · FORMA</title>
+  <meta name="description" content="Finalise ta commande FORMA. Livraison discrète partout au Québec." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page-pdp">
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="nav is-scrolled" data-nav>
+    <a class="nav__brand" href="index.html" aria-label="Accueil FORMA">FORMA</a>
+    <nav class="nav__links" aria-label="Navigation principale">
+      <a href="index.html#collection">Boutique</a>
+      <a href="index.html#craft">Savoir-faire</a>
+      <a href="index.html#promise">Promesse</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="nav__ghost" type="button" data-cart-open aria-label="Ouvrir le panier">
+        Panier <span data-cart-count>0</span>
+      </button>
+      <a class="nav__cta" href="index.html#collection">Magasiner</a>
+    </div>
+  </header>
+
+  <main class="order">
+    <p class="eyebrow">Caisse</p>
+    <h1>Finaliser la commande</h1>
+    <p class="order__lede">Livraison discrète. Emballage neutre. Tu peux tout vérifier avant de confirmer.</p>
+
+    <div class="order__empty" data-order-empty hidden>
+      <p>Ton panier est vide.</p>
+      <a class="btn btn--pink" href="index.html#collection">Continuer tes achats</a>
+    </div>
+
+    <form class="order__layout" data-order-form hidden>
+      <div class="order__main">
+        <section class="order__card">
+          <h2>Livraison</h2>
+          <div class="order__grid">
+            <label>
+              Nom complet
+              <input name="name" type="text" required autocomplete="name" />
+            </label>
+            <label>
+              Courriel
+              <input name="email" type="email" required autocomplete="email" />
+            </label>
+            <label class="order__full">
+              Adresse
+              <input name="address" type="text" required autocomplete="street-address" />
+            </label>
+            <label>
+              Ville
+              <input name="city" type="text" required autocomplete="address-level2" />
+            </label>
+            <label>
+              Code postal
+              <input name="postal" type="text" required autocomplete="postal-code" />
+            </label>
+            <label>
+              Téléphone
+              <input name="phone" type="tel" autocomplete="tel" />
+            </label>
+          </div>
+        </section>
+
+        <section class="order__card">
+          <h2>Mode de livraison</h2>
+          <div class="order__radios" data-shipping>
+            <label class="order__radio is-active">
+              <input type="radio" name="shipping" value="express" checked />
+              <span>
+                <strong>Express discrète · 2 jours</strong>
+                <em>Gratuite dès 75&nbsp;$ · sinon 9&nbsp;$</em>
+              </span>
+            </label>
+            <label class="order__radio">
+              <input type="radio" name="shipping" value="standard" />
+              <span>
+                <strong>Standard · 4 à 6 jours</strong>
+                <em>5&nbsp;$</em>
+              </span>
+            </label>
+          </div>
+        </section>
+
+        <section class="order__card">
+          <h2>Paiement</h2>
+          <p class="order__pay-note">Aperçu boutique : le paiement réel sera branché à la mise en ligne (Stripe / Interac).</p>
+          <div class="order__pay">
+            <label>
+              Nom sur la carte
+              <input name="cardname" type="text" placeholder="Comme sur la carte" autocomplete="cc-name" />
+            </label>
+            <label>
+              Numéro de carte
+              <input name="card" type="text" inputmode="numeric" placeholder="4242 4242 4242 4242" autocomplete="cc-number" />
+            </label>
+            <div class="order__pay-row">
+              <label>
+                Expiration
+                <input name="exp" type="text" placeholder="MM / AA" autocomplete="cc-exp" />
+              </label>
+              <label>
+                CVC
+                <input name="cvc" type="text" inputmode="numeric" placeholder="123" autocomplete="cc-csc" />
+              </label>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="order__side">
+        <section class="order__card order__card--sticky">
+          <h2>Résumé</h2>
+          <ul class="order__summary" data-order-summary></ul>
+          <div class="order__totals">
+            <p><span>Sous-total</span><strong data-order-subtotal>0&nbsp;$</strong></p>
+            <p><span>Livraison</span><strong data-order-shipping>0&nbsp;$</strong></p>
+            <p class="order__total"><span>Total</span><strong data-order-total>0&nbsp;$</strong></p>
+          </div>
+          <button class="btn btn--pink" type="submit">Confirmer la commande</button>
+          <p class="order__note">Aucun montant n’est débité dans cet aperçu.</p>
+        </section>
+      </aside>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <strong>FORMA</strong>
+      <p>Le plaisir, conçu avec précision.</p>
+    </div>
+    <div class="footer__cols">
+      <div>
+        <h4>Boutique</h4>
+        <a href="index.html#collection">Collection</a>
+        <a href="index.html#promise">Livraison</a>
+        <a href="index.html#promise">Retours</a>
+      </div>
+      <div>
+        <h4>Entreprise</h4>
+        <a href="index.html#craft">À propos</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+    <p class="footer__fine">
+      © 2026 Forma Labs. 18+ seulement. Aperçu boutique.
+      <span class="footer__credit">Conception : <a href="https://roymarketing.ca" target="_blank" rel="noopener noreferrer">Roy Marketing</a></span>
+    </p>
+  </footer>
+
+  <aside class="cart" data-cart hidden>
+    <div class="cart__panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <header class="cart__head">
+        <h2 id="cart-title">Ton panier</h2>
+        <button type="button" class="cart__close" data-cart-close aria-label="Fermer le panier">✕</button>
+      </header>
+      <ul class="cart__list" data-cart-list></ul>
+      <footer class="cart__foot">
+        <p class="cart__total">Total <strong data-cart-total>0&nbsp;$</strong></p>
+        <button class="btn btn--pink" type="button" data-checkout>Passer à la caisse</button>
+      </footer>
+    </div>
+  </aside>
+
+  <div class="toast" data-toast hidden role="status"></div>
+  <script type="module" src="js/order.js"></script>
+</body>
+</html>

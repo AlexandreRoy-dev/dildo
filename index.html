@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FORMA · Le plaisir, conçu avec précision</title>
+  <meta name="description" content="Bien-être sexuel premium, pensé comme un bon logiciel : discret, précis, et fait pour devenir évident." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="nav" data-nav>
+    <a class="nav__brand" href="#top" aria-label="Accueil FORMA">FORMA</a>
+    <nav class="nav__links" aria-label="Navigation principale">
+      <a href="#collection">Boutique</a>
+      <a href="#craft">Savoir-faire</a>
+      <a href="#promise">Promesse</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="nav__ghost" type="button" data-cart-open aria-label="Ouvrir le panier">
+        Panier <span data-cart-count>0</span>
+      </button>
+      <a class="nav__cta" href="#collection">Magasiner</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__media">
+        <video
+          class="hero__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="assets/products/rabbit-a.png"
+          aria-label="Produit FORMA tenu dans la main"
+        >
+          <source src="assets/hero.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__veil" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__content">
+        <p class="hero__brand" data-reveal>FORMA</p>
+        <h1 class="hero__title" data-reveal>
+          Le plaisir,<br />conçu avec précision.
+        </h1>
+        <p class="hero__lede" data-reveal>
+          Silicone sûr pour le corps. Moteurs silencieux. Un design qui s’efface… jusqu’au moment où tu en as besoin.
+        </p>
+        <div class="hero__ctas" data-reveal>
+          <a class="btn btn--pink" href="#collection">Voir la collection</a>
+          <a class="btn btn--ghost" href="#craft">Découvrir le savoir-faire</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="strip" aria-label="Piliers de la marque">
+      <p><span>Silicone de grade médical</span></p>
+      <p><span>Moteur ultra discret</span></p>
+      <p><span>Livraison discrète</span></p>
+      <p><span>Retours sous 30 jours</span></p>
+    </section>
+
+    <section class="collection" id="collection">
+      <div class="section-head">
+        <p class="eyebrow">Collection</p>
+        <h2>Pensé pour ta vraie vie.</h2>
+        <p class="section-lede">Quatre pièces. Une même sensation. Zéro surplus, zéro gimmick.</p>
+      </div>
+
+      <div class="grid" role="list">
+        <article class="product" role="listitem" data-product>
+          <a class="product__media" href="forma-curve.html">
+            <img src="assets/products/rabbit-a.png" alt="Forma Curve, vibromasseur rose sur fond noir" />
+            <span class="product__tag">Vedette</span>
+          </a>
+          <div class="product__meta">
+            <div>
+              <h3><a href="forma-curve.html">Forma Curve</a></h3>
+              <p>Contour point G ergonomique · 8 modes</p>
+            </div>
+            <p class="price">129&nbsp;$</p>
+          </div>
+          <button class="btn btn--line" type="button" data-add="curve">Ajouter au panier</button>
+        </article>
+
+        <article class="product" role="listitem" data-product>
+          <a class="product__media" href="forma-pulse.html">
+            <img src="assets/products/rabbit-b.png" alt="Forma Pulse, vibromasseur rose avec anneau doré" />
+            <span class="product__tag">Nouveau</span>
+          </a>
+          <div class="product__meta">
+            <div>
+              <h3><a href="forma-pulse.html">Forma Pulse</a></h3>
+              <p>Aspiration par ondes d’air · rechargeable</p>
+            </div>
+            <p class="price">149&nbsp;$</p>
+          </div>
+          <button class="btn btn--line" type="button" data-add="pulse">Ajouter au panier</button>
+        </article>
+
+        <article class="product" role="listitem" data-product>
+          <a class="product__media" href="forma-soft.html">
+            <img class="product__img--soft" src="assets/products/rabbit-b.png" alt="Forma Soft, vibromasseur rose" />
+          </a>
+          <div class="product__meta">
+            <div>
+              <h3><a href="forma-soft.html">Forma Soft</a></h3>
+              <p>Silicone ultra doux · intensité douce</p>
+            </div>
+            <p class="price">89&nbsp;$</p>
+          </div>
+          <button class="btn btn--line" type="button" data-add="soft">Ajouter au panier</button>
+        </article>
+
+        <article class="product" role="listitem" data-product>
+          <a class="product__media" href="forma-duo.html">
+            <img class="product__img--duo" src="assets/products/rabbit-a.png" alt="Forma Duo, vibromasseur rose" />
+          </a>
+          <div class="product__meta">
+            <div>
+              <h3><a href="forma-duo.html">Forma Duo</a></h3>
+              <p>Contrôle partagé · prêt pour l’appli</p>
+            </div>
+            <p class="price">179&nbsp;$</p>
+          </div>
+          <button class="btn btn--line" type="button" data-add="duo">Ajouter au panier</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="craft" id="craft">
+      <div class="craft__copy">
+        <p class="eyebrow">Savoir-faire</p>
+        <h2>Du matériel qui se sent comme un logiciel.</h2>
+        <p class="section-lede">
+          On sort moins de modèles, et on obsessionne sur ceux qui restent. Chaque surface, chaque courbe de moteur, chaque cycle de charge est réglé pour le quotidien, pas pour l’étagère.
+        </p>
+        <ul class="craft__list">
+          <li>
+            <strong>Sûr pour le corps, toujours</strong>
+            <span>Silicone platine. Sans phtalates. Étanche là où ça compte.</span>
+          </li>
+          <li>
+            <strong>Silencieux par design</strong>
+            <span>Moteurs calibrés sous 45&nbsp;dB pour que la pièce reste à toi.</span>
+          </li>
+          <li>
+            <strong>Discret du début à la fin</strong>
+            <span>Emballage neutre. Facturation discrète. Pas de surprise sur le pas de porte.</span>
+          </li>
+        </ul>
+      </div>
+      <aside class="craft__panel craft__panel--dark">
+        <img src="assets/products/rabbit-b.png" alt="Vibromasseur rose Forma sur fond noir" />
+      </aside>
+    </section>
+
+    <section class="promise" id="promise">
+      <div class="section-head section-head--center">
+        <p class="eyebrow">Promesse</p>
+        <h2>Bien-être moderne, zéro gêne.</h2>
+        <p class="section-lede">La même clarté qu’un bon produit SaaS, appliquée au plaisir.</p>
+      </div>
+      <div class="promise__row">
+        <article>
+          <h3>Livraison gratuite en 2 jours</h3>
+          <p>Les commandes de 75&nbsp;$ et plus partent le jour même.</p>
+        </article>
+        <article>
+          <h3>Essai de 30 jours</h3>
+          <p>Essaie-le. Si ça clique pas, renvoie-le. Sans histoire.</p>
+        </article>
+        <article>
+          <h3>Soutien privé</h3>
+          <p>De vraies personnes. Pas de robot qui lit ton historique à voix haute.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="section-head section-head--center">
+        <p class="eyebrow">Contact</p>
+        <h2>Une question avant d’acheter?</h2>
+        <p class="section-lede">Écris-nous. Réponse discrète, sans jugement, en français.</p>
+        <a class="btn btn--pink" href="mailto:bonjour@forma.ca">bonjour@forma.ca</a>
+      </div>
+    </section>
+
+    <section class="close">
+      <div class="close__inner">
+        <p class="hero__brand">FORMA</p>
+        <h2>Prêt quand tu l’es.</h2>
+        <p>Commence avec Curve, la pièce de la vidéo. Le reste se construit autour.</p>
+        <a class="btn btn--pink" href="forma-curve.html">Magasiner Forma Curve</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <strong>FORMA</strong>
+      <p>Le plaisir, conçu avec précision.</p>
+    </div>
+    <div class="footer__cols">
+      <div>
+        <h4>Boutique</h4>
+        <a href="#collection">Collection</a>
+        <a href="#collection">Accessoires</a>
+        <a href="#promise">Livraison</a>
+      </div>
+      <div>
+        <h4>Entreprise</h4>
+        <a href="#craft">À propos</a>
+        <a href="#promise">Soins</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <p class="footer__fine">
+      © 2026 Forma Labs. 18+ seulement. Aperçu boutique.
+      <span class="footer__credit">Conception : <a href="https://roymarketing.ca" target="_blank" rel="noopener noreferrer">Roy Marketing</a></span>
+    </p>
+  </footer>
+
+  <aside class="cart" data-cart hidden>
+    <div class="cart__panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <header class="cart__head">
+        <h2 id="cart-title">Ton panier</h2>
+        <button type="button" class="cart__close" data-cart-close aria-label="Fermer le panier">✕</button>
+      </header>
+      <ul class="cart__list" data-cart-list></ul>
+      <footer class="cart__foot">
+        <p class="cart__total">Total <strong data-cart-total>0&nbsp;$</strong></p>
+        <button class="btn btn--pink" type="button" data-checkout>Passer à la caisse</button>
+      </footer>
+    </div>
+  </aside>
+
+  <div class="toast" data-toast hidden role="status"></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

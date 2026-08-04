@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forma Soft · FORMA</title>
+  <meta name="description" content="Soft, c’est l’entrée en matière. Texture plus souple, intensités plus basses, même exigence de sécurité. Idéal pour explorer sans pression." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page-pdp" data-product-id="soft">
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="nav is-scrolled" data-nav>
+    <a class="nav__brand" href="index.html" aria-label="Accueil FORMA">FORMA</a>
+    <nav class="nav__links" aria-label="Navigation principale">
+      <a href="index.html#collection">Boutique</a>
+      <a href="index.html#craft">Savoir-faire</a>
+      <a href="index.html#promise">Promesse</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="nav__ghost" type="button" data-cart-open aria-label="Ouvrir le panier">
+        Panier <span data-cart-count>0</span>
+      </button>
+      <a class="nav__cta" href="index.html#collection">Magasiner</a>
+    </div>
+  </header>
+
+  <main class="pdp">
+    <nav class="pdp__crumbs" aria-label="Fil d’Ariane">
+      <a href="index.html">Accueil</a>
+      <span aria-hidden="true">/</span>
+      <a href="index.html#collection">Boutique</a>
+      <span aria-hidden="true">/</span>
+      <span data-crumb-current>Forma Soft</span>
+    </nav>
+
+    <section class="pdp__hero">
+      <div class="pdp__gallery">
+        <div class="pdp__stage">
+          <span class="product__tag" data-pdp-tag hidden></span>
+          <img data-pdp-main src="assets/products/rabbit-b.png" alt="Forma Soft" />
+        </div>
+        <div class="pdp__thumbs" data-pdp-thumbs></div>
+      </div>
+
+      <div class="pdp__info">
+        <p class="eyebrow">Fiche produit</p>
+        <h1 data-pdp-title>Forma Soft</h1>
+        <p class="pdp__price" data-pdp-price>89 $</p>
+        <p class="pdp__blurb" data-pdp-blurb>Silicone ultra doux · intensité douce</p>
+        <p class="pdp__desc" data-pdp-desc>Soft, c’est l’entrée en matière. Texture plus souple, intensités plus basses, même exigence de sécurité. Idéal pour explorer sans pression.</p>
+
+        <div class="pdp__field">
+          <p class="pdp__label">Mode</p>
+          <div class="pdp__chips" data-pdp-modes></div>
+        </div>
+
+        <div class="pdp__field">
+          <p class="pdp__label">Quantité</p>
+          <div class="pdp__qty">
+            <button type="button" data-qty-step="-1" aria-label="Diminuer">−</button>
+            <input data-pdp-qty type="number" min="1" max="10" value="1" aria-label="Quantité" />
+            <button type="button" data-qty-step="1" aria-label="Augmenter">+</button>
+          </div>
+        </div>
+
+        <div class="pdp__actions">
+          <button class="btn btn--pink" type="button" data-pdp-add>Ajouter au panier</button>
+          <button class="btn btn--ghost" type="button" data-pdp-buy>Acheter maintenant</button>
+        </div>
+
+        <ul class="pdp__trust">
+          <li>Livraison discrète en 2 jours</li>
+          <li>Essai de 30 jours</li>
+          <li>Garantie 2 ans</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="pdp__specs-wrap">
+      <h2>Fiche technique</h2>
+      <dl class="pdp__specs" data-pdp-specs></dl>
+    </section>
+
+    <section class="pdp__related-wrap">
+      <div class="section-head">
+        <p class="eyebrow">Aussi dans la collection</p>
+        <h2>Continuer à magasiner</h2>
+      </div>
+      <div class="grid grid--3" data-pdp-related></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <strong>FORMA</strong>
+      <p>Le plaisir, conçu avec précision.</p>
+    </div>
+    <div class="footer__cols">
+      <div>
+        <h4>Boutique</h4>
+        <a href="index.html#collection">Collection</a>
+        <a href="index.html#collection">Accessoires</a>
+        <a href="index.html#promise">Livraison</a>
+      </div>
+      <div>
+        <h4>Entreprise</h4>
+        <a href="index.html#craft">À propos</a>
+        <a href="index.html#promise">Soins</a>
+        <a href="index.html#promise">Contact</a>
+      </div>
+    </div>
+    <p class="footer__fine">
+      © 2026 Forma Labs. 18+ seulement. Aperçu boutique.
+      <span class="footer__credit">Conception : <a href="https://roymarketing.ca" target="_blank" rel="noopener noreferrer">Roy Marketing</a></span>
+    </p>
+  </footer>
+
+  <aside class="cart" data-cart hidden>
+    <div class="cart__panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <header class="cart__head">
+        <h2 id="cart-title">Ton panier</h2>
+        <button type="button" class="cart__close" data-cart-close aria-label="Fermer le panier">✕</button>
+      </header>
+      <ul class="cart__list" data-cart-list></ul>
+      <footer class="cart__foot">
+        <p class="cart__total">Total <strong data-cart-total>0&nbsp;$</strong></p>
+        <button class="btn btn--pink" type="button" data-checkout>Passer à la caisse</button>
+      </footer>
+    </div>
+  </aside>
+
+  <div class="toast" data-toast hidden role="status"></div>
+
+  <script type="module" src="js/product.js"></script>
+</body>
+</html>

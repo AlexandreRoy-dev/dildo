@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commande confirmée · FORMA</title>
+  <meta name="description" content="Merci pour ta commande FORMA." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page-pdp">
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="nav is-scrolled" data-nav>
+    <a class="nav__brand" href="index.html" aria-label="Accueil FORMA">FORMA</a>
+    <nav class="nav__links" aria-label="Navigation principale">
+      <a href="index.html#collection">Boutique</a>
+      <a href="index.html#craft">Savoir-faire</a>
+      <a href="index.html#promise">Promesse</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__cta" href="index.html#collection">Magasiner</a>
+    </div>
+  </header>
+
+  <main class="thanks">
+    <p class="hero__brand">FORMA</p>
+    <h1>Commande confirmée</h1>
+    <p data-thanks-copy>
+      Merci. Un courriel de confirmation serait envoyé ici en production.
+      Livraison discrète, emballage neutre.
+    </p>
+    <div class="thanks__actions">
+      <a class="btn btn--pink" href="index.html#collection">Continuer tes achats</a>
+      <a class="btn btn--ghost" href="index.html">Retour à l’accueil</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <strong>FORMA</strong>
+      <p>Le plaisir, conçu avec précision.</p>
+    </div>
+    <div class="footer__cols">
+      <div>
+        <h4>Boutique</h4>
+        <a href="index.html#collection">Collection</a>
+        <a href="index.html#promise">Livraison</a>
+      </div>
+      <div>
+        <h4>Entreprise</h4>
+        <a href="index.html#craft">À propos</a>
+        <a href="https://roymarketing.ca" target="_blank" rel="noopener noreferrer">Roy Marketing</a>
+      </div>
+    </div>
+    <p class="footer__fine">
+      © 2026 Forma Labs. 18+ seulement. Aperçu boutique.
+      <span class="footer__credit">Conception : <a href="https://roymarketing.ca" target="_blank" rel="noopener noreferrer">Roy Marketing</a></span>
+    </p>
+  </footer>
+
+  <script type="module">
+    import { initAgeGate } from "./js/age.js";
+    import { initNav } from "./js/cart.js";
+    import { money } from "./js/catalog.js";
+
+    initAgeGate();
+    initNav();
+
+    try {
+      const order = JSON.parse(localStorage.getItem("forma-last-order") || "null");
+      const el = document.querySelector("[data-thanks-copy]");
+      if (order && el) {
+        el.textContent = `Merci${order.name ? `, ${order.name.split(" ")[0]}` : ""}. Total ${money(order.total)}. Un courriel de confirmation serait envoyé ici en production.`;
+      }
+    } catch {
+      /* ignore */
+    }
+  </script>
+</body>
+</html>
