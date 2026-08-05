@@ -23,7 +23,10 @@ function initReveal() {
   nodes.forEach((n) => io.observe(n));
 
   window.requestAnimationFrame(() => {
-    document.querySelectorAll(".hero [data-reveal]").forEach((n) => n.classList.add("is-in"));
+    document.querySelectorAll(".hero [data-reveal]").forEach((n, i) => {
+      n.style.transitionDelay = `${i * 0.1}s`;
+      n.classList.add("is-in");
+    });
   });
 }
 

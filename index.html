@@ -31,22 +31,19 @@
   <main id="top">
     <section class="hero">
       <div class="hero__media">
-        <video
-          class="hero__video"
-          autoplay
-          muted
-          loop
-          playsinline
-          poster="assets/products/rabbit-a.png"
-          aria-label="Produit erosia tenu dans la main"
-        >
-          <source src="assets/hero.mp4" type="video/mp4" />
-        </video>
+        <img
+          class="hero__img"
+          src="assets/products/rabbit-a.png"
+          alt="Produit erosia rose sur fond noir"
+          width="1200"
+          height="1500"
+          fetchpriority="high"
+          decoding="async"
+        />
         <div class="hero__veil" aria-hidden="true"></div>
       </div>
 
       <div class="hero__content">
-        <p class="hero__brand brand" data-reveal><span class="brand__e">e</span>rosia</p>
         <h1 class="hero__title" data-reveal>
           Le plaisir,<br />conçu avec précision.
         </h1>
